@@ -1,7 +1,6 @@
 flask
 gunicorn
 pandas
-os
 bcrypt
 dotenv
 psycopg2
