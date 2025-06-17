@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: media-mash-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn recommender_api:app
+    plan: free
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - fromDatabase:
+          name: pgDB
+          property: connectionString
+          key: DB_URL
