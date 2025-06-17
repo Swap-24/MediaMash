@@ -4,3 +4,4 @@ pandas
 bcrypt
 dotenv
 psycopg2
+flask-cors
