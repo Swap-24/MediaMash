@@ -92,8 +92,8 @@ def login():
         cursor.close()
 
 
-user_movie_matrix = pd.read_csv('user_movie_matrix.csv', index_col=0)
-movie_stats = pd.read_csv('movie_stats.csv', index_col=0)
+user_movie_matrix = pd.read_csv('user_movie_matrix_updated.csv.gz',compression='gzip', index_col=0)
+movie_stats = pd.read_csv('movie_stats_updated.csv', index_col=0)
 
 @app.route('/recommend', methods=['GET'])
 def recommend():
