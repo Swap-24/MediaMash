@@ -12,7 +12,7 @@ async function login() {
   }
 
   try {
-    const res = await axios.post('http://localhost:5000/login', {
+    const res = await axios.post('/login', {
       username: username,
       password: password
     });
@@ -52,7 +52,7 @@ async function signup() {
   }
 
   try {
-    const res = await axios.post('http://localhost:5000/signup', {
+    const res = await axios.post('/signup', {
       username: username,
       password: password
     });
@@ -88,7 +88,7 @@ async function getRecommendations() {
   }
 
   try {
-    const response = await axios.get(`http://127.0.0.1:5000/recommend?title=${encodeURIComponent(title)}&num=${count}`);
+    const response = await axios.get(`/recommend?title=${encodeURIComponent(title)}&num=${count}`);
     const results = response.data;
 
     const list = document.getElementById('results');
@@ -121,7 +121,7 @@ async function fetchSuggestions(query) {
   }
 
   try {
-    const response = await axios.get(`http://127.0.0.1:5000/autocomplete?q=${encodeURIComponent(query)}`);
+    const response = await axios.get(`/autocomplete?q=${encodeURIComponent(query)}`);
     const suggestions = response.data;
 
     list.innerHTML = '';
