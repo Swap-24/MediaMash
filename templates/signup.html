@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='signupstyle.css') }}">
+</head>
+<body>
+  <h2>Signup</h2>
+  <div>
+    <input type="text" id="signup-username" placeholder="Username" required><br><br>
+    <input type="password" id="signup-password" placeholder="Password" required><br><br>
+    <button onclick="signup()">Sign up</button>
+    <p id="signup-message"></p>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+</body>

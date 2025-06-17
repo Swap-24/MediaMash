@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='loginstyle.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <div>
+      <input type="text" id="login-username" placeholder="Username" required><br><br>
+      <input type="password" id="login-password" placeholder="Password" required><br><br>
+      <button onclick="login()">Login</button>
+      <button onclick="window.location.href='/signup-page'">Sign Up</button>
+      <p id="login-message"></p>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>

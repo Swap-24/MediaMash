@@ -1,0 +1,247 @@
+/* ====== Fonts & Reset ====== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* ====== Container ====== */
+.container {
+  background-color: rgba(30, 30, 30, 0.85);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+/* ====== Headings ====== */
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #6dd5fa;
+  text-shadow: 0 0 8px #6dd5faaa;
+}
+
+/* ====== Inputs ====== */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.25rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #1e1e1e;
+  color: #eee;
+  box-shadow: inset 2px 2px 6px #121212, inset -2px -2px 6px #2c2c2c;
+  transition: background-color 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+  color: #aaa;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  background-color: #252525;
+  box-shadow: 0 0 8px #6dd5fa;
+}
+
+/* ====== Button ====== */
+button {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  background: linear-gradient(90deg, #56ccf2, #2f80ed);
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #2f80edaa;
+  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.15s ease;
+  user-select: none;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #2f80ed, #56ccf2);
+  box-shadow: 0 8px 25px #56ccf2cc;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ====== Lists ====== */
+ul {
+  list-style: none;
+  padding-left: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 0.5rem;
+  border-radius: 12px;
+  background-color: #111;
+  box-shadow: inset 0 0 10px #000;
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+
+ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 12px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #2f80ed;
+  border-radius: 12px;
+}
+
+/* ====== List items ====== */
+li {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+  color: #ddd;
+  font-weight: 500;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  user-select: none;
+  animation: fadeSlideIn 0.3s ease forwards;
+}
+
+li:hover {
+  background-color: #2f80ed;
+  color: white;
+  font-weight: 600;
+}
+
+/* ====== Error message styling ====== */
+#error {
+  color: #ff6b6b;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  min-height: 1.3em; /* reserve space */
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* ====== Animations ====== */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 520px) {
+  .container {
+    padding: 1.5rem 1.75rem;
+  }
+
+  button, input[type="text"], input[type="number"] {
+    font-size: 1rem;
+  }
+}
+/* Reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+}
+
+.login-container input::placeholder {
+  color: #e0e0e0;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-container button:hover {
+  background-color: #45a049;
+}
+
+#login-message {
+  margin-top: 10px;
+  color: #ffb3b3;
+}
+
