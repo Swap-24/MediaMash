@@ -110,7 +110,7 @@ def load_data():
     global user_movie_matrix, movie_stats
     if user_movie_matrix is None or movie_stats is None:
         print("[DATA] Loading recommendation data...")
-        user_movie_matrix = pd.read_csv('user_movie_matrix', index_col=0)
+        user_movie_matrix = pd.read_csv('user_movie_matrix.csv', index_col=0)
         movie_stats = pd.read_csv('movie_stats.csv', index_col=0)
         print("[DATA] Recommendation data loaded.")
 
